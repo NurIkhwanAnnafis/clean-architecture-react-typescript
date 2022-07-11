@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@NurIkhwanAnnafis 
-NurIkhwanAnnafis
-/
-clean-architecture-react-typescript
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-clean-architecture-react-javascript/.gitignore
-
-NurIkhwanAnnafis feat: setup service network
-Latest commit ef9fc20 6 days ago
- History
- 0 contributors
-179 lines (132 sloc)  2.74 KB
-
 # Created by https://www.toptal.com/developers/gitignore/api/react,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=react,node
 
@@ -183,43 +155,6 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/react,node# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-Training
-Blog
-About
-You have no unread notifications
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
