@@ -2,7 +2,7 @@ import React from 'react';
 import { MTodo } from '../../../Domain/Model/MTodo';
 
 interface Props {
-  listData: MTodo.root[] | null
+  listData: MTodo.root[]
 }
 
 const TodoList: React.FC<Props> = (props) => {
@@ -11,7 +11,7 @@ const TodoList: React.FC<Props> = (props) => {
   return (
     <ul>
       Todo List:
-      {listData && listData.map(data => <li key={data.id}>{data.title}</li>)}
+      {listData.map(data => <li key={data.id}>{data.title}</li>)}
     </ul>
   )
 }
