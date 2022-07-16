@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
-import ApiTodo from "../../Data/DataSource/Api/ApiTodo";
-import { RTodoImp } from "../../Data/Repository/RTodoImp";
-import { MTodo } from "../../Domain/Model/MTodo"
-import { UGetTodoList } from '../../Domain/Usecase/Todo/GetTodoList';
-
+import { useNavigate } from "react-router-dom";
+import ApiTodo from "../../../Data/DataSource/Api/ApiTodo";
+import { RTodoImp } from "../../../Data/Repository/RTodoImp";
+import { MTodo } from "../../../Domain/Model/MTodo"
+import { UGetTodoList } from '../../../Domain/Usecase/Todo/GetTodoList';
 
 const TodoViewListModel = () => {
+  const navigate = useNavigate();
   const [listData, setListData] = useState<MTodo.root[]>([]);
   
   const usecase = new UGetTodoList(
@@ -13,7 +14,7 @@ const TodoViewListModel = () => {
   )
 
   const getTodoList = async () => {
-    const tempListData = await usecase.invoke();
+    const tempListData = await usecase.getList();
     setListData(tempListData);
   }
 
@@ -22,8 +23,11 @@ const TodoViewListModel = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleClick = (pathname: string) => navigate(pathname);
+
   return {
     listData,
+    handleClick,
   }
 }
 

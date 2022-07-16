@@ -2,7 +2,8 @@ import { MTodo } from "../../Model/MTodo";
 import { RTodo } from "../../Repository/RTodo";
 
 interface GetTodoList {
-  invoke: () => Promise<MTodo.root[]>;
+  getList: () => Promise<MTodo.root[]>;
+  getDetail: (id: string) => Promise<MTodo.root | null>;
 }
 
 export class UGetTodoList implements GetTodoList {
@@ -11,7 +12,7 @@ export class UGetTodoList implements GetTodoList {
     this.todoRepo = _todoRepo;
   }
 
-  invoke = async () => {
-    return this.todoRepo.getTodoList();
-  }
+  getList = async () => this.todoRepo.getTodoList();
+
+  getDetail = async (id: string) => this.todoRepo.getTodoDetail(id);
 }

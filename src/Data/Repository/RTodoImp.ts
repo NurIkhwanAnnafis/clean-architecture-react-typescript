@@ -12,4 +12,8 @@ export class RTodoImp implements RTodo {
   async getTodoList(): Promise<MTodo.root[]> {
     return this.dataSource.getTodoList();
   }
+
+  async getTodoDetail(id: string): Promise<MTodo.root | null> {
+    return this.dataSource.getTodoDetail(id);
+  }
 }

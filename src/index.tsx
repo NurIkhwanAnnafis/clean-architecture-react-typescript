@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import './Assets/Styles/index.css';
 import Todo from './Presentation/Todo/TodoViewList';
 import reportWebVitals from './reportWebVitals';
+import Routes from './routes';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Todo />
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

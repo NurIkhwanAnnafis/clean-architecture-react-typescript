@@ -1,13 +1,13 @@
 import TodoList from './component/List';
 import './TodoViewList.css';
-import TodoViewListModel from './TodoViewListModel';
+import TodoViewListModel from './model/TodoViewListModel';
 
 const Todo = () => {
-  const { listData } = TodoViewListModel();
+  const { listData, handleClick } = TodoViewListModel();
 
   return (
     <div className="App">
-      <TodoList listData={listData} />
+      <TodoList listData={listData} handleClick={handleClick} />
     </div>
   );
 }

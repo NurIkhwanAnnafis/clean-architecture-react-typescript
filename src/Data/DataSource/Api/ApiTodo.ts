@@ -15,4 +15,16 @@ export default class ApiTodo implements DSTodo {
       return [];
     }
   }
+
+  async getTodoDetail(id: string): Promise<MTodo.root | null> {
+    try {
+      const data: Promise<ETodoApi.root> = networkService.get(`todos/${id}`);
+
+      return data;
+    } catch (error) {
+      Promise.reject(error);
+
+      return null;
+    }
+  }
 }
